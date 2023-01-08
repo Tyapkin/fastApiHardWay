@@ -1,12 +1,12 @@
 """init
 
 Revision ID: 09b6ec38c5d7
-Revises: 
+Revises:
 Create Date: 2023-01-08 17:25:35.777188
 
 """
-from alembic import op
 import sqlalchemy as sa
+from alembic import op
 
 
 # revision identifiers, used by Alembic.

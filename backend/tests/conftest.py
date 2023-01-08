@@ -1,15 +1,16 @@
-import sys
 import os
-from typing import Any, Generator
+import sys
+from typing import Any
+from typing import Generator
 
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from backend.api.base import api_router
 from backend.db.base import Base
 from backend.db.session import get_db
-from backend.api.base import api_router
 from backend.main import app
 
 sys.path.append(
@@ -23,6 +24,7 @@ engine = create_engine(
 )
 
 SessionTesting = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
 
 def start_application():
     app.include_router(api_router)

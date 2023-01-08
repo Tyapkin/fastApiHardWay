@@ -1,6 +1,7 @@
+from typing import Generator
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from typing import Generator
 
 from backend.core.config import settings
 

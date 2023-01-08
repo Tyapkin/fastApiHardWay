@@ -12,4 +12,3 @@ def test_create_user(client):
     assert response.status_code == 200
     assert data["email"] == "testuser@ema.il"
     assert data["is_active"] == True
-

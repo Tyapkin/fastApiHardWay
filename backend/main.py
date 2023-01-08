@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+
+from backend.api.base import api_router
 from backend.core.config import settings
 # from backend.apis.general_pages.route_homepage import general_page_router
-from backend.api.base import api_router
 
 
 def include_router(_app):

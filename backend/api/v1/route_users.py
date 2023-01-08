@@ -1,10 +1,11 @@
 from fastapi import APIRouter
-from sqlalchemy.orm import Session
 from fastapi import Depends
+from sqlalchemy.orm import Session
 
-from backend.schemas.users import UserCreate, ShowUser
-from backend.db.session import get_db
 from backend.crud.crud_users import create_new_user
+from backend.db.session import get_db
+from backend.schemas.users import ShowUser
+from backend.schemas.users import UserCreate
 
 router = APIRouter()
 

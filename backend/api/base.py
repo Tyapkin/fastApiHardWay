@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from backend.api.v1 import route_general_pages
+from backend.api.v1 import route_jobs
 from backend.api.v1 import route_users
 
 
@@ -14,4 +15,9 @@ api_router.include_router(
     route_users.router,
     prefix='/users',
     tags=['users']
+)
+api_router.include_router(
+    route_jobs.router,
+    prefix='/jobs',
+    tags=['jobs']
 )
